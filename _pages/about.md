@@ -18,6 +18,7 @@ redirect_from:
 <span class='anchor' id='about-me'></span>
 
 I’m a senior-year undergraduate student major in Computer Science at ShanghaiTech University, with a wonderful semester (Spring 2023) spent in MIT.
+
 My research interest includes computer vision and deep learning. My goal is to enhance the interpretability and dependability of models, striving to create agents capable of generalizing in diverse environments, with applications on medical vision, autonomous driving, etc.
 
 # News
@@ -32,7 +33,7 @@ My research interest includes computer vision and deep learning. My goal is to e
 
 [Dynamic Neural Fields for Learning Atlases of 4D Fetal MRI Time-series](https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
 
-Zeen Chi$^{*}$, **Zhongxiao Cong$^{*}$**, Clinton J. Wang, Yingcheng Liu, P. Ellen Grant, Dr. Esra Abaci Turk, S. Mazdak Abulnaga, Neel Dey, Polina Golland ($^{*}$ Equal contribution)
+Zeen Chi$^{\*}$, **Zhongxiao Cong$^{*}$**, Clinton J. Wang, Yingcheng Liu, P. Ellen Grant, Dr. Esra Abaci Turk, S. Mazdak Abulnaga, Neel Dey, Polina Golland ($^{\*}$ Equal contribution)
 
 [Under Review]
 
