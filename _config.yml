@@ -22,7 +22,7 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 # Site Author
 author:
   name             : "Zhongxiao Cong"
-  avatar           : "images/photo.jpeg"
+  avatar           : "images/photo.jpg"
   bio              : "ShanghaiTech University"
   location         : "Shanghai, China"
   employer         :
@@ -43,7 +43,7 @@ author:
   instagram        :
   impactstory      : # e.g., "https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : "Zhongxiao Cong"
+  linkedin         : "zhongxiaocong"
   dblp             : # e.g., "https://dblp.org/pid/xx/xxxx.html"
   orcid            : # e.g., "https://orcid.org/xxxx"
   pinterest        :
