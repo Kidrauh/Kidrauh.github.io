@@ -21,12 +21,6 @@ I’m a senior-year undergraduate student major in Computer Science at ShanghaiT
 
 My research interest includes computer vision and deep learning. My goal is to enhance the interpretability and dependability of models, striving to create agents capable of generalizing in diverse environments, with applications on medical vision, autonomous driving, etc.
 
-<span class='anchor' id='-news'></span>
-
-# News
-
-- *2022.02*: &nbsp; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2022.02*: &nbsp; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
 
 <span class='anchor' id='-publications'></span>
 
