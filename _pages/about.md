@@ -46,9 +46,9 @@ Medical Imaging Meets NeurIPS (NeurIPS Workshop) 2023
 - *2021.10* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
 - *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
 
-<span class='anchor' id='-educations'></span>
+<span class='anchor' id='-education'></span>
 
-# Educations
+# Education
 
 - *2020.09 - 2024.07 (expected)*, Bachelor in Computer Science, ShanghaiTech University.
 - *2023.02 - 2023.06*, Exchange student in Computer Science, Massachusetts Institute of Technology.
