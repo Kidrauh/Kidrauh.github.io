@@ -42,19 +42,24 @@ Medical Imaging Meets NeurIPS (NeurIPS Workshop) 2023
 </div>
 </div>
 
-<!-- # Honors and Awards
-- *2021.10* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
+<span class='anchor' id='-honors-and-awards'></span>
+
+# Honors and Awards
+- *2023.06* ShanghaiTech International Exchange Program Scholarship
+- *2022.12* ShanghaiTech Merit Student, 2021-2022
+- *2021.12* ShanghaiTech Outstanding Student, 2020-2021
+- *2022.11* The Outstanding Individual of ShanghaiTech Career Trek Program
+- *2021.11* The Outstanding Individual of ShanghaiTech Social Practice Project
 
 <span class='anchor' id='-education'></span>
 
 # Education
 
 - *2020.09 - 2024.07 (expected)*, Bachelor in Computer Science, ShanghaiTech University.
-- *2023.02 - 2023.06*, Exchange student in Computer Science, Massachusetts Institute of Technology.
+- *2023.02 - 2023.05*, Exchange student in Computer Science, Massachusetts Institute of Technology.
 
 <span class='anchor' id='-teachings'></span>
 
 # Teaching
 
-- *2019.05 - 2020.02*, Teaching Assistant in Algorithm and Data Structures, ShanghaiTech University.
+- *2022.09 - 2023.01*, Teaching Assistant in Algorithm and Data Structures, ShanghaiTech University.
