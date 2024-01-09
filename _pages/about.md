@@ -17,10 +17,11 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I’m a senior-year undergraduate student major in Computer Science at ShanghaiTech University, with a wonderful semester (Spring 2023) spent in MIT.
+Hi! I am a senior undergraduate student majoring in Computer Science at ShanghaiTech University. I was an exchange student at MIT in Spring 2023. I am currently an undergraduate researcher in PLUS lab, ShanghaiTech University, advised by [Prof. Xuming He](https://faculty.sist.shanghaitech.edu.cn/faculty/hexm/index.html). During my exchange at MIT, I was fortunate to join Medical Vision Group and work with [Prof. Polina Golland](https://people.csail.mit.edu/polina/) and [Dr. Neel Dey](https://www.neeldey.com/).
 
 My research interest includes computer vision and deep learning. My goal is to enhance the interpretability and dependability of models, striving to create agents capable of generalizing in diverse environments, with applications on medical vision, autonomous driving, etc.
 
+In my spare time, I find joy in playing basketball and capturing moments through photography.
 
 <span class='anchor' id='-publications'></span>
 
