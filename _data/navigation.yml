@@ -14,3 +14,6 @@ main:
 
   - title: "Teaching"
     url: "/#-teachings"
+
+  - title: "CV"
+    url: "/files/CV.pdf"
