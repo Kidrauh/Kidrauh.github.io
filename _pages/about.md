@@ -47,7 +47,7 @@ Medical Imaging Meets NeurIPS (NeurIPS Workshop) 2023
 
 # Education
 
-<div class='paper-box'><div class='paper-box-image'><div><img src='images/mit.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><img src='images/mit.png' alt="sym" width="50%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 ## Massachusetts Institute of Technology
@@ -61,7 +61,7 @@ Feb. 2023 - May 2023
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><img src='images/shtech.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><img src='images/shtech.png' alt="sym" width="50%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 ## ShanghaiTech University
