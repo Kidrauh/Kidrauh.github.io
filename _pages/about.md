@@ -43,6 +43,38 @@ Medical Imaging Meets NeurIPS (NeurIPS Workshop) 2023
 </div>
 </div>
 
+<span class='anchor' id='-education'></span>
+
+# Education
+
+<div class='paper-box'><div class='paper-box-image'><div><img src='images/mit.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+## Massachusetts Institute of Technology
+
+Exchange student in Computer Science
+
+Undergraduate researcher at [Medical Vision Group](https://www.csail.mit.edu/research/medical-vision-group), MIT CSAIL
+
+Feb. 2023 - May 2023
+
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><img src='images/shtech.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+## ShanghaiTech University
+
+Bachelor in Computer Science
+
+Undergraduate researcher at [PLUS Lab](https://plus.sist.shanghaitech.edu.cn/)
+
+Sep. 2020 - Expected Jun. 2024
+
+</div>
+</div>
+
 <span class='anchor' id='-honors-and-awards'></span>
 
 # Honors and Awards
@@ -52,12 +84,6 @@ Medical Imaging Meets NeurIPS (NeurIPS Workshop) 2023
 - *2022.11* The Outstanding Individual of ShanghaiTech Career Trek Program
 - *2021.11* The Outstanding Individual of ShanghaiTech Social Practice Project
 
-<span class='anchor' id='-education'></span>
-
-# Education
-
-- *2020.09 - 2024.07 (expected)*, Bachelor in Computer Science, ShanghaiTech University.
-- *2023.02 - 2023.05*, Exchange student in Computer Science, Massachusetts Institute of Technology.
 
 <span class='anchor' id='-teachings'></span>
 
