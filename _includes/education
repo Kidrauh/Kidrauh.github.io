@@ -1,0 +1,30 @@
+
+<table class="pub_table">
+<tr>
+  <td class="pub_td1"><div class="teaser_img_div"><img class="teaser_img" src="images/mit.png" /></div></td>
+  <td class="pub_td2"><b>Massachusetts Institute of Technology</b><br />
+		<div class='paper_metadata'>
+        Exchange student in Computer Science, GPA: 5.0/5.0
+        </div>
+        Undergraduate researcher at <a href="https://www.csail.mit.edu/research/medical-vision-group">Medical Vision Group</a>, MIT CSAIL
+        <div class='paper_metadata'>
+            Feb. 2023 - May 2023
+        </div>
+</td></tr>
+{% include table-space.html %}
+
+<tr>
+    <td class="pub_td1"><div class="teaser_img_div"><img class="teaser_img" src="images/shtech.jpeg"/></div></td>
+    <td class="pub_td2"><b>ShanghaiTech University</b><br />
+          <div class='paper_metadata'>
+            Bachelor in Computer Science, GPA: 3.87/4.0
+          </div>
+          Undergraduate researcher at <a href="https://plus.sist.shanghaitech.edu.cn/">PLUS Lab</a>
+          <div class='paper_metadata'>
+            Sep. 2020 - Expected Jun. 2024
+          </div>
+  </td></tr>
+  {% include table-space.html %}
+
+
+</table>

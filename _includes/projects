@@ -1,0 +1,17 @@
+
+<table class="pub_table">
+<tr>
+  <td class="pub_td1"><div class="teaser_img_div"><a href="https://arxiv.org/abs/2311.02874"><img class="teaser_img" src="images/projects/chess.jpeg" /></a></div></td>
+  <td class="pub_td2"><b>Chinese Chess</b><br />
+    <div class='paper_metadata'>
+        <i>ShanghaiTech CS181: Artificial Intelligence</i>
+    </div>
+	<div class='paper_metadata'>
+        Zhongxiao Cong, Suting Chen, Zeen Chi, Bingnan Li, Yifan Qin
+    </div>
+  <a href="https://github.com/Kidrauh/CS181-Final-Project">Project Page</a> 
+</td></tr>
+{% include table-space.html %}
+
+
+</table>

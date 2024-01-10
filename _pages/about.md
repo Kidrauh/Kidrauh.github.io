@@ -27,53 +27,49 @@ In my spare time, I find joy in playing basketball and capturing moments through
 
 # Publications
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS Workshop 2023</div><img src='images/pipeline.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
+<style type="text/css">
+	.paper_metadata a {
+		text-decoration: none!important;
+		color: #494e52;
+	}
+	table, th, td {
+		border: 0px solid black;
+	}
+	table.pub_table {
+		width: 100%;
+		font-size: 12pt;
+	}
+	td.pub_td1 {
+		width: 19%;
+	}
+	td.pub_td2 {
+		width: 67%;
+	}
+	span.subbullet {
+		font-size: 11pt;
+		margin-left: 20px
+	}
+	oral {
+		font-weight: bold;
+		color: red;
+	}
 
-## Dynamic Neural Fields for Learning Atlases of 4D Fetal MRI Time-series
 
-Zeen Chi$^{\*}$, **Zhongxiao Cong$^{*}$**, Clinton J. Wang, Yingcheng Liu, Esra Abaci Turk, P. Ellen Grant, S. Mazdak Abulnaga, Polina Golland, Neel Dey ($^{\*}$ Equal contribution)
+</style>
 
-Medical Imaging Meets NeurIPS (NeurIPS Workshop) 2023
-
-[[paper]](https://arxiv.org/abs/2311.02874) [[code]](https://github.com/Kidrauh/neural-atlasing)
-
-<!-- [**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong> -->
-
-</div>
-</div>
+{% include publications %}
 
 <span class='anchor' id='-education'></span>
 
 # Education
 
-<div class='paper-box'><div class='paper-box-image'><div><img src='images/mit.png' alt="sym" width="50%"></div></div>
-<div class='paper-box-text' markdown="1">
+{% include education %}
 
-## Massachusetts Institute of Technology
+<!-- <span class='anchor' id='-project'></span>
 
-Exchange student in Computer Science
+# Selected Projects
 
-Undergraduate researcher at [Medical Vision Group](https://www.csail.mit.edu/research/medical-vision-group), MIT CSAIL
-
-Feb. 2023 - May 2023
-
-</div>
-</div>
-
-<div class='paper-box'><div class='paper-box-image'><div><img src='images/shtech.png' alt="sym" width="50%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-## ShanghaiTech University
-
-Bachelor in Computer Science
-
-Undergraduate researcher at [PLUS Lab](https://plus.sist.shanghaitech.edu.cn/)
-
-Sep. 2020 - Expected Jun. 2024
-
-</div>
-</div>
+{% include projects %} -->
 
 <span class='anchor' id='-honors-and-awards'></span>
 

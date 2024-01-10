@@ -46,7 +46,6 @@
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    border-bottom: 1px #efefef solid;
     padding: 2em 0 2em 0;
     
 
@@ -76,7 +75,7 @@
         
         .paper-box-text{
             justify-content: left;
-            padding-left: 2em;
+            padding-left: 0em;
             max-width: 60%;
             order: 2;
         }
