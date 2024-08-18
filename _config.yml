@@ -6,7 +6,7 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-title                    : "Clara (Zhongxiao) Cong"
+title                    : "Clara(Zhongxiao) Cong"
 description              : "MSCV student at Carnegie Mellon University"
 repository               : "Kidrauh/Kidrauh.github.io"
 google_scholar_stats_use_cdn : true
@@ -21,7 +21,7 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 
 # Site Author
 author:
-  name             : "Zhongxiao Cong"
+  name             : "Clara(Zhongxiao) Cong"
   avatar           : "images/photo.jpeg"
   bio              : "Carnegie Mellon University"
   location         : "Pittsburgh, PA"
