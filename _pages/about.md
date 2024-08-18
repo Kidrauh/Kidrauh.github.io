@@ -17,11 +17,21 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Hi! I am a senior undergraduate student majoring in Computer Science at ShanghaiTech University. I was an exchange student at MIT in Spring 2023. I am currently an undergraduate researcher in PLUS lab, ShanghaiTech University, advised by [Prof. Xuming He](https://faculty.sist.shanghaitech.edu.cn/faculty/hexm/index.html). During my exchange at MIT, I was fortunate to join Medical Vision Group and work with [Prof. Polina Golland](https://people.csail.mit.edu/polina/) and [Dr. Neel Dey](https://www.neeldey.com/).
+# About me
 
-My research interest includes computer vision and deep learning. My goal is to enhance the interpretability and dependability of models, striving to create agents capable of generalizing in diverse environments, with applications on medical vision, autonomous driving, etc.
+Hi! I'm a Master’s student in Computer Vision at the School of Computer Science, Carnegie Mellon University. 
+
+I obtained my B.Eng. in Computer Science at ShanghaiTech University, where I worked on domain generalization and vision-language models under the supervision of [Prof. Xuming He](https://faculty.sist.shanghaitech.edu.cn/faculty/hexm/index.html). I was an exchange student at MIT in Spring 2023, where I was fortunate to join Medical Vision Group and work with [Prof. Polina Golland](https://people.csail.mit.edu/polina/) and [Dr. Neel Dey](https://www.neeldey.com/) on medical image analysis with neural rendering.
 
 In my spare time, I find joy in playing basketball and capturing moments through photography.
+
+<span class='anchor' id='research'></span>
+
+# Research
+
+My research interests include <b>Computer Vision</b>, <b>Machine Learning</b> and <b>Robotics</b>, with a focus on <b>Domain Generalization, Multimodal Learning, Neural Rendering, and Vision-Language Models</b>.
+My goal is to enable AI to perceive and interact with the world like humans by improving the interpretability and reliability of models, with applications in autonomous driving, medical vision, etc.
+
 
 <span class='anchor' id='-publications'></span>
 
@@ -74,9 +84,9 @@ In my spare time, I find joy in playing basketball and capturing moments through
 <span class='anchor' id='-honors-and-awards'></span>
 
 # Honors and Awards
+- *2024.06* Shanghai Outstanding Graduates
 - *2023.06* ShanghaiTech International Exchange Program Scholarship
 - *2022.12* ShanghaiTech Merit Student, 2021-2022
-- *2021.12* ShanghaiTech Outstanding Student, 2020-2021
 - *2022.11* The Outstanding Individual of ShanghaiTech Career Trek Program
 - *2021.11* The Outstanding Individual of ShanghaiTech Social Practice Project
 
@@ -84,5 +94,7 @@ In my spare time, I find joy in playing basketball and capturing moments through
 <span class='anchor' id='-teachings'></span>
 
 # Teaching
+<p style="color: #A5A4A4">Teaching is one of my FAVORITE ways of learning :D</p>
 
+- *2024.03 - 2024.06*, TOEFL Teaching Assistant, El Fuego Education Services.
 - *2022.09 - 2023.01*, Teaching Assistant in Algorithm and Data Structures, ShanghaiTech University.

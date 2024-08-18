@@ -1,10 +1,22 @@
 
 <table class="pub_table">
 <tr>
+    <td class="pub_td1"><div class="teaser_img_div"><img class="teaser_img" src="images/cmu.jpg" /></div></td>
+    <td class="pub_td2"><b>Carnegie Mellon University</b><br />
+            <div class='paper_metadata'>
+            Master's student in Computer Vision (MSCV)
+            </div>
+            <div class='paper_metadata'>
+                Aug. 2024 - Expected Dec. 2025
+            </div>
+    </td></tr>
+    {% include table-space.html %}
+    
+<tr>
   <td class="pub_td1"><div class="teaser_img_div"><img class="teaser_img" src="images/mit.png" /></div></td>
   <td class="pub_td2"><b>Massachusetts Institute of Technology</b><br />
 		<div class='paper_metadata'>
-        Exchange student in Computer Science, GPA: 5.0/5.0
+        Exchange student in Computer Science
         </div>
         Undergraduate researcher at <a href="https://www.csail.mit.edu/research/medical-vision-group">Medical Vision Group</a>, MIT CSAIL
         <div class='paper_metadata'>
@@ -17,11 +29,11 @@
     <td class="pub_td1"><div class="teaser_img_div"><img class="teaser_img" src="images/shtech.jpeg"/></div></td>
     <td class="pub_td2"><b>ShanghaiTech University</b><br />
           <div class='paper_metadata'>
-            Bachelor in Computer Science, GPA: 3.87/4.0
+            Bachelor in Computer Science
           </div>
           Undergraduate researcher at <a href="https://plus.sist.shanghaitech.edu.cn/">PLUS Lab</a>
           <div class='paper_metadata'>
-            Sep. 2020 - Expected Jun. 2024
+            Sep. 2020 - Jun. 2024
           </div>
   </td></tr>
   {% include table-space.html %}
