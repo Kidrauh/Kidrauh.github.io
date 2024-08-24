@@ -29,8 +29,8 @@ In my spare time, I find joy in playing basketball and capturing moments through
 
 # Research
 
-My research interests include <b>Computer Vision</b>, <b>Machine Learning</b> and <b>Robotics</b>, with a focus on <b>Domain Generalization, Multimodal Learning, Neural Rendering, and Vision-Language Models</b>.
-My goal is to enable AI to perceive and interact with the world like humans by improving the interpretability and reliability of models, with applications in autonomous driving, medical vision, etc.
+My research interests include <b>Computer Vision</b>, <b>Machine Learning</b> and <b>Robotics</b>, with a focus on <b> 3D Vision, Neural Rendering and Multimodal Learning.
+My goal is to enable AI to perceive and interact with the world like humans by improving the interpretability and reliability of models, with applications in autonomous driving, healthcare, etc.
 
 
 <span class='anchor' id='-publications'></span>
