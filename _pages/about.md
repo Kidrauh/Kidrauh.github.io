@@ -19,23 +19,28 @@ redirect_from:
 
 # About me
 
-Hi! I'm a Master’s student in Computer Vision at the School of Computer Science, Carnegie Mellon University. 
+Hi! I'm a Master’s student in Computer Vision at Carnegie Mellon University, advised by [Prof. Shubham Tulsiani](https://shubhtuls.github.io/).
 
-I obtained my B.Eng. in Computer Science at ShanghaiTech University, where I worked on domain generalization and vision-language models under the supervision of [Prof. Xuming He](https://faculty.sist.shanghaitech.edu.cn/faculty/hexm/index.html). I was an exchange student at MIT in Spring 2023, where I was fortunate to join Medical Vision Group and work with [Prof. Polina Golland](https://people.csail.mit.edu/polina/) and [Dr. Neel Dey](https://www.neeldey.com/) on medical image analysis with neural rendering.
-
-In my spare time, I find joy in playing basketball and capturing moments through photography.
+I obtained my B.Eng. in Computer Science at ShanghaiTech University. I was an exchange student at MIT in Spring 2023, where I was fortunate to join Medical Vision Group and work with [Prof. Polina Golland](https://people.csail.mit.edu/polina/) and [Dr. Neel Dey](https://www.neeldey.com/).
 
 <span class='anchor' id='research'></span>
 
 # Research
 
-My research interests include <b>Computer Vision</b>, <b>Machine Learning</b> and <b>Robotics</b>, with a focus on <b> 3D Vision, Neural Rendering and Multimodal Learning.</b>
-My goal is to enable AI to perceive and interact with the world like humans by improving the interpretability and reliability of models, with applications in autonomous driving, healthcare, etc.
+I am generally interested in <b>Computer Vision</b>, <b>Graphics</b>, and <b>Machine Learning</b>, with a focus on <b> 3D Vision</b> and <b>Neural Rendering</b>. 
+
+<!-- In my spare time, I find joy in playing basketball and capturing moments through photography. -->
+
+<!-- <span class='anchor' id='research'></span>
+
+# Research
+
+I am generally interested in <b>computer vision</b>, <b>graphics</b>, and <b>machine learning</b>, with a focus on <b> 3D Vision</b> and <b>Neural Rendering</b>.  -->
 
 
 <span class='anchor' id='-publications'></span>
 
-# Publications
+# Publication
 
 <style type="text/css">
 	.paper_metadata a {
@@ -69,7 +74,7 @@ My goal is to enable AI to perceive and interact with the world like humans by i
 
 {% include publications %}
 
-<span class='anchor' id='-education'></span>
+<span class='anchor' id='-education'></span> 
 
 # Education
 
@@ -83,12 +88,12 @@ My goal is to enable AI to perceive and interact with the world like humans by i
 
 <span class='anchor' id='-honors-and-awards'></span>
 
-# Honors and Awards
+# Selected Awards
 - *2024.06* Shanghai Outstanding Graduates
-- *2023.06* ShanghaiTech International Exchange Program Scholarship
-- *2022.12* ShanghaiTech Merit Student, 2021-2022
-- *2022.11* The Outstanding Individual of ShanghaiTech Career Trek Program
-- *2021.11* The Outstanding Individual of ShanghaiTech Social Practice Project
+<!-- - *2023.06* ShanghaiTech International Exchange Program Scholarship -->
+- *2022.12* ShanghaiTech Merit Student
+<!-- - *2022.11* The Outstanding Individual of ShanghaiTech Career Trek Program -->
+<!-- - *2021.11* The Outstanding Individual of ShanghaiTech Social Practice Project -->
 
 
 <span class='anchor' id='-teachings'></span>
