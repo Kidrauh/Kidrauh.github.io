@@ -19,34 +19,39 @@ redirect_from:
 
 # About me
 
-Hi! I'm a Master’s student in Computer Vision at Carnegie Mellon University, advised by [Prof. Shubham Tulsiani](https://shubhtuls.github.io/).
+Hi! I’m Zhongxiao (Clara) Cong. I am currently a Master’s student in Computer Vision at Carnegie Mellon University, advised by [Prof. Shubham Tulsiani](https://shubhtuls.github.io/). Before that, I was fortunate to work with [Prof. Matthew O'Toole](https://www.cs.cmu.edu/~motoole2/) on multi-modal 3D reconstruction. I am broadly interested in computer vision and machine learning, with a focus on 3D vision and developing models that capture the structure and motion of the dynamic world.
 
-I obtained my B.Eng. in Computer Science at ShanghaiTech University. I was an exchange student at MIT in Spring 2023, where I was fortunate to join Medical Vision Group and work with [Prof. Polina Golland](https://people.csail.mit.edu/polina/) and [Dr. Neel Dey](https://www.neeldey.com/).
+I obtained my B.Eng. in Computer Science at ShanghaiTech University. During Spring 2023, I was an exchange student at MIT, where I joined the Medical Vision Group under the supervision of [Prof. Polina Golland](https://people.csail.mit.edu/polina/) and was mentored by [Dr. Neel Dey](https://www.neeldey.com/). I couldn’t be more grateful for their invaluable insights and support.
+
+Always happy to chat about research!
 
 <span class='anchor' id='research'></span>
 
-# Research
+<!-- # Research
 
 I am generally interested in <b>Computer Vision</b>, <b>Graphics</b>, and <b>Machine Learning</b>, with a focus on <b> 3D Vision</b> and <b>Neural Rendering</b>. 
-
-<!-- In my spare time, I find joy in playing basketball and capturing moments through photography. -->
-
-<!-- <span class='anchor' id='research'></span>
-
-# Research
-
-I am generally interested in <b>computer vision</b>, <b>graphics</b>, and <b>machine learning</b>, with a focus on <b> 3D Vision</b> and <b>Neural Rendering</b>.  -->
+ -->
 
 
 <span class='anchor' id='-publications'></span>
 
-# Publication
+# Publications
 
 <style type="text/css">
-	.paper_metadata a {
+	/* .paper_metadata a {
 		text-decoration: none!important;
 		color: #494e52;
-	}
+	} */
+    .paper_metadata a {
+    color: #1a4b8b;        /* darkred */
+    text-decoration: none; /* 不要下划线 */
+    }
+
+    /* 悬停时变亮 */
+    .paper_metadata a:hover {
+        color:rgb(252, 147, 61);        /* firebrick，稍微亮一点 */
+        text-decoration: none;
+    }
 	table, th, td {
 		border: 0px solid black;
 	}

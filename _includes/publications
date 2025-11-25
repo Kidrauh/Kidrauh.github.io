@@ -1,13 +1,79 @@
 
 <table class="pub_table">
 <tr>
-  <td class="pub_td1"><div class="teaser_img_div"><a href="https://arxiv.org/abs/2311.02874"><img class="teaser_img" src="images/dynamic_fields.png" /></a></div></td>
-  <td class="pub_td2"><b>Dynamic Neural Fields for Learning Atlases of 4D Fetal MRI Time-series</b><br />
+  <td class="pub_td1"><div class="teaser_img_div"><a href="https://arxiv.org/abs/2311.02874"><img class="teaser_img" src="images/flow3r.png" /></a></div></td>
+  <td class="pub_td2"><b>Flow3r: Factored Flow Prediction for Visual Geometry Learning</b><br />
 		<div class='paper_metadata'>
-    Zeen Chi*, <u>Zhongxiao Cong</u>*, Clinton J. Wang, Yingcheng Liu, Esra Abaci Turk, P. Ellen Grant, S. Mazdak Abulnaga, Polina Golland, Neel Dey
-  	</div>
-  <a href="https://arxiv.org/abs/2311.02874">Paper</a> | <a href="https://github.com/Kidrauh/neural-atlasing">Code</a>
+        <u><b>Zhongxiao Cong</b></u>,
+        <a href="https://qitaozhao.github.io/">Qitao Zhao</a>,
+        <a href="https://msjeon.me/">Minsik Jeon</a>,
+        <a href="https://shubhtuls.github.io/">Shubham Tulsiani</a>
+  	    </div>
+        <div class='paper_metadata'>
+        Under review
+        </div>
+  <a href="https://arxiv.org/abs/2311.02874">Project Page</a> 
 </td></tr>
+
+<tr>
+  <td class="pub_td1">
+    <div class="teaser_img_div">
+      <a href="https://arxiv.org/abs/2311.02874">
+        <img class="teaser_img" src="images/radarsim.png" />
+      </a>
+    </div>
+  </td>
+
+  <td class="pub_td2">
+    <b>RadarSim: Simulating Single-Chip Radar via Multimodal Neural Fields</b><br />
+    <div class='paper_metadata'>
+      <a href="https://sally-chen.github.io/">Chuhan Chen</a>,
+      <a href="https://tianshu.io/">Tianshu Huang</a>,
+      <a href="https://akarsh-prabhakara.github.io/">Akarsh Prabhakara</a>,
+      <a href="https://www.linkedin.com/in/chaithanyakumarmummadi/">Chaithanya Kumar Mummadi</a>,
+      <u><b>Zhongxiao Cong</b></u>,
+      <a href="https://users.ece.cmu.edu/~agr/">Anthony Rowe</a>,
+      <a href="https://www.cs.cmu.edu/~motoole2/">Matthew O'Toole</a>,
+      <a href="https://www.cs.cmu.edu/~deva/">Deva Ramanan</a>
+    </div>
+    <div class='paper_metadata'>
+      3DV, 2026
+    </div>
+    <a href="https://arxiv.org/abs/2311.02874">Paper</a> 
+  </td>
+</tr>
+
+
+<tr>
+  <td class="pub_td1">
+    <div class="teaser_img_div">
+      <a href="https://arxiv.org/abs/2311.02874">
+        <img class="teaser_img" src="images/dynamic_fields.png" />
+      </a>
+    </div>
+  </td>
+
+  <td class="pub_td2">
+    <b>Dynamic Neural Fields for Learning Atlases of 4D Fetal MRI Time-series</b><br />
+    <div class='paper_metadata'>
+      <a href="https://www.linkedin.com/in/zeen-chi-230333238/">Zeen Chi*</a>,
+      <u><b>Zhongxiao Cong*</b></u>,
+      <a href="https://clintonjwang.github.io/">Clinton J. Wang</a>,
+      <a href="https://yingchengliu.com/">Yingcheng Liu</a>,
+      <a href="https://research.childrenshospital.org/researchers/esra-abaci-turk">Esra Abaci Turk</a>,
+      <a href="https://www.childrenshospital.org/directory/patricia-ellen-grant">P. Ellen Grant</a>,
+      <a href="https://people.csail.mit.edu/abulnaga/">S. Mazdak Abulnaga</a>,
+      <a href="https://people.csail.mit.edu/polina/">Polina Golland</a>,
+      <a href="https://www.neeldey.com/">Neel Dey</a>
+    </div>
+    <div class='paper_metadata'>
+      Medical Imaging Meets NeurIPS (NeurIPS Workshop), 2023
+    </div>
+    <a href="https://arxiv.org/abs/2311.02874">Paper</a> |
+    <a href="https://github.com/Kidrauh/neural-atlasing">Code</a>
+  </td>
+</tr>
+
 {% include table-space.html %}
 
 
