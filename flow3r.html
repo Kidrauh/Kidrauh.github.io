@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="DiffusionSfM: Predicting Structure and Motion via Ray Origin and Endpoint Diffusion">
+  <meta name="keywords" content="Sparse view, reconstruction, diffusion, Structure-from-Motion">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flow3r: Factored Flow Prediction for Visual Geometry Learning</title>
+
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YXDZHQRVSJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YXDZHQRVSJ');
+</script>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h2 class="title is-2 publication-title">Flow3r: Factored Flow Prediction for Visual Geometry Learning </h2>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+                <a href="https://kidrauh.github.io/" target="_blank">Zhongxiao Cong</a>,</span>
+            <span class="author-block">
+              <a href="https://qitaozhao.github.io/" target="_blank">Qitao Zhao</a>,</span>
+            <span class="author-block">
+              <a href="https://msjeon.me/" target="_blank">Minsik Jeon</a>,</span>
+            <span class="author-block">
+              <a href="https://shubhtuls.github.io/" target="_blank">Shubham Tulsiani</a></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Carnegie Mellon University</span>
+          </div>
+
+          <!-- <div class="is-size-5 publication-authors">
+            <span class="author-block">CVPR 2025</span>
+          </div> -->
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2505.05473"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- <span class="link-block">
+                <a href="https://github.com/QitaoZhao/DiffusionSfM"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span> -->
+              <!-- <span class="link-block">
+                <a href="https://huggingface.co/spaces/qitaoz/DiffusionSfM"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    🤗
+                  </span>
+                  <span>Demo</span>
+                  </a>
+              </span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./projects/flow3r/figures/teaser.png" alt="Teaser figure."/>
+      <h5 class="">
+        <strong>Flow3r</strong> leverages unlabeled videos via flow supervision for visual geometry learning, enabling more accurate reconstruction in challenging real-world dynamic scenes compared to supervised baselines that can only leverage dense geometry and pose supervision.
+      </h5>
+    </div>
+  </div>
+</section>
+
+
+<!-- <section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-one">
+          <video poster="" id="one" autoplay muted loop playsinline height="100%">
+            <source src="./projects/flow3r/videos/backpack_108_12850_22707_N5.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-two">
+          <video poster="" id="two" autoplay muted loop playsinline height="100%">
+            <source src="./projects/flow3r/videos/habitat_hm3d_train_00512-WZDzPCybQvS_WZDzPCybQvS.basis_N5_4.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-three">
+          <video poster="" id="three" autoplay muted loop playsinline height="100%">
+            <source src="./projects/flow3r/videos/habitat_gibson_Elmira_N5_2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-four">
+          <video poster="" id="four" autoplay muted loop playsinline height="100%">
+            <source src="./projects/flow3r/videos/teddybear_159_17485_33236_N5.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-five">
+          <video poster="" id="five" autoplay muted loop playsinline height="100%">
+            <source src="./projects/flow3r/videos/bench_250_26758_54244_N5.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We propose flow3r, a scalable framework for visual geometry learning that leverages flow prediction to guide learning using unlabeled monocular videos. Current 3D/4D reconstruction systems primarily rely on dense geometry and pose supervision, and cannot easily generalize to diverse dynamic real-world scenes. In this work, we propose a mechanism to augment training directly from unlabeled videos, leveraging dense 2D correspondences (or 'flow')  between arbitrary image pairs as supervision.
+            Our key insight is that a factored flow prediction module that computes between two images using 'geometry latents' from one image and the 'pose latent' from other can guide visual geometry learning. We first highlight the benefits and scalability of flow supervision in controlled settings and then leverage large-scale unlabeled data to improve off-the-shelf visual geometry models. We evaluate flow3r across diverse 3D benchmarks and demonstrate competitive or state-of-the-art performance, even surpassing supervised models trained with more labeled data.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">How Can Flow Supervise Geometry?</h2>
+          <div class="content has-text-justified">
+            <p>
+                Modern visual-geometry networks first encode each image into patch tokens and a camera token <strong>(a)</strong> using a multi-view transformer backbone. Based on these latent features, there are several ways to predict dense correspondences between frames.
+                Traditional correspondence heads <strong>(b)</strong> infer flow directly from patch features, relying purely on visual appearance and ignoring the underlying scene geometry. Alternatively, one may compute flow by explicitly projecting predicted 3D points into another view using decoded camera poses <strong>(c)</strong>; however, this approach assumes static scenes and is highly sensitive to geometric prediction errors. In contrast, our factored flow mechanism <strong>(d)</strong> combines the geometry latents from the source view with the camera latents from the target view and decodes correspondences directly in latent space. This design yields geometry-aware flow, improves robustness, and naturally extends to dynamic scenes.
+            </p>
+          </div>
+          <div class="content has-text-centered">
+            <img src="./projects/flow3r/figures/comparison.png" alt="Comparison figure."/>
+          </div>
+        </div>
+      </div>
+  </section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-justified">
+          <p>
+            Flow3r predicts visual geometry using factored flow supervision, enabling scalable geometry learning from unlabeled videos. Each input image is encoded and processed by the multi-view transformer to produce camera tokens and patch tokens. For data with dense geometry and pose labels, we directly supervise the patch tokens and camera tokens with the corresponding labels. For dynamic datasets, we predict flow between two frames in a factorized manner, supervised by an off-the-shelf 2D flow prediction model UFM<sup><a href="https://arxiv.org/abs/2506.09278">[1]</a></sup>. To obtain the factored flow, we fuse the patch features of one frame with the camera features of the other, and decode the fused representation through the DPT head to produce dense flow predictions.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./projects/flow3r/figures/framework.png" alt="Method figure."/>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Interactive 3D Models</h2>
+    <div class="columns is-centered">
+      <div class="content has-text-justified">
+          <div style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 500px;
+          width: 100%;
+          background: #ffffff;">
+            <model-viewer id="QualitativeResult"
+                          src="./projects/flow3r/3D/car_flow3r.glb"
+                          alt="3D Model"
+                          loading="eager"
+                          touch-action="pan-y"
+                          environment-image="legacy"
+                          camera-orbit="180deg 70deg auto"
+                          zoom-sensitivity="0.2"
+                          camera-controls
+                          style="width: 60%; height: 90%; background: #887c7c;">
+            </model-viewer>
+        </div>
+        <div class="content has-text-justified">
+          <div class="thumbnail-container" id="thumbnail-qualitative">
+            <img src="./projects/flow3r/3D/car.png" data-glb="./projects/flow3r/3D/car_flow3r.glb">
+            <img src="./projects/flow3r/3D/cat.png" data-glb="./projects/flow3r/3D/cat_flow3r.glb">
+            <img src="./projects/flow3r/3D/room.png" data-glb="./projects/flow3r/3D/room_flow3r.glb">
+            <img src="./projects/flow3r/3D/kitchen2.png" data-glb="./projects/flow3r/3D/kitchen2_flow3r.glb">
+          </div>  
+        </div>  
+        <style>
+          .thumbnail-container img, .thumbnail-container video {
+            transition: all 0.3s ease;
+            border: 3px solid transparent;
+            cursor: pointer;
+          }
+          .thumbnail-selected {
+            transform: scale(1.2);
+            border: 6px solid #79b4f2 !important; 
+            box-shadow: 0 0 10px rgba(121, 180, 242, 0.5);
+            z-index: 10;
+            position: relative;
+          }
+          
+          /* New styles for responsive horizontal gallery */
+          .thumbnail-container {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            gap: 10px;
+            padding: 10px 0;
+            -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+            scrollbar-width: thin;
+            align-items: center;
+          }
+          
+          .thumbnail-container img, 
+          .thumbnail-container video {
+            flex: 0 0 auto;
+            height: auto;
+            width: 200px; /* Consistent width */
+            object-fit: cover;
+            max-width: none;
+          }
+          
+          /* Custom scrollbar styling */
+          .thumbnail-container::-webkit-scrollbar {
+            height: 6px;
+          }
+          
+          .thumbnail-container::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+          }
+          
+          .thumbnail-container::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+          }
+          
+          .thumbnail-container::-webkit-scrollbar-thumb:hover {
+            background: #555;
+          }
+          
+          /* Adjust for smaller screens */
+          @media (max-width: 768px) {
+            .thumbnail-container img,
+            .thumbnail-container video {
+              height: 100px;
+            }
+          }
+        </style>
+        <script>
+          // The problem is here - you're trying to select an element that doesn't exist
+          // document.querySelector('#thumbnail-qualitative img[src="resources/qualitative/college.png"]').classList.add('thumbnail-selected');
+          
+          // Instead, select the first element that actually exists in your thumbnail container
+          document.addEventListener('DOMContentLoaded', function() {
+            // Select the first element in the thumbnail container (video or image)
+            const firstThumbnail = document.querySelector('#thumbnail-qualitative video, #thumbnail-qualitative img');
+            if (firstThumbnail) {
+              firstThumbnail.classList.add('thumbnail-selected');
+              // If it's a video, play it
+              if (firstThumbnail.tagName.toLowerCase() === 'video') {
+                firstThumbnail.play();
+              }
+            }
+            
+            document.querySelectorAll('#thumbnail-qualitative img, #thumbnail-qualitative video').forEach(el => {
+              // Rest of your click handler code remains the same
+              el.addEventListener('click', () => {
+                const glbSrc = el.getAttribute('data-glb');
+                const modelViewer = document.getElementById('QualitativeResult');
+                modelViewer.setAttribute('src', glbSrc);
+                modelViewer.cameraOrbit = "180deg 70deg auto";
+                modelViewer.resetTurntableRotation(0);
+                modelViewer.jumpCameraToGoal();
+
+                // Remove selection class from all elements
+                document.querySelectorAll('#thumbnail-qualitative img, #thumbnail-qualitative video').forEach(element => {
+                    element.classList.remove('thumbnail-selected');
+                });
+                
+                // Add selection class to clicked element
+                el.classList.add('thumbnail-selected');
+                
+                // Play video if it's a video element
+                if (el.tagName.toLowerCase() === 'video') {
+                    el.play();
+                }
+                
+                // Pause all other videos
+                document.querySelectorAll('#thumbnail-qualitative video').forEach(video => {
+                    if (video !== el) {
+                        video.pause();
+                        video.currentTime = 0;
+                    }
+                });
+              });
+            });
+          });
+        </script>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Results</h2>
+        <!-- Subsection. -->
+        <h3 class="title is-4">Does Factored Flow Help?</h3>
+        <div class="content has-text-justified">
+          <p>
+            We first compare our factored prediction paradigm against alternative designs and no-flow baselines on static and dynamic scenes.
+            We include two  models trained with full 3D supervision with different numbers of training sequences (denoted as 3d-sup and 3d-sup++). Next, building upon the no-flow baseline 3d-sup, we introduce three additional variants that incorporate flow supervision using different formulations: (1) flow-projective, computes flow explicitly from predicted camera poses and pointmaps via projective geometry; (2) flow-tracking,  adopts a VGGT-style tracking head based on pairwise patch features; (3) flow-factored applies our proposed factored flow prediction formulation. 
+         </p>
+        </div>
+        <h4 class="title is-5">Static Scene Results</h4>
+        <div class="content has-text-justified">
+            <p>
+                On ScanNet++, our factored flow prediction model (flow-factored) significantly outperforms the no-flow baseline (3d-sup), while outperforming other alternatives that leverage flow supervision. It even performs highly comparable with the fully-3D-supervised baseline (3d-sup++).
+            </p>
+          </div>
+        <div class="content has-text-centered">
+          <img src="./projects/flow3r/figures/result1.png" alt="SPARF Comparison figure." width="75%"/>
+        </div>
+
+        <h4 class="title is-5">Dynamic Scene Results</h4>
+        <div class="content has-text-justified">
+            <p>
+                We train seven model variants on OmniWorld and SpatialVID, where OmniWorld provides 3D supervision and SpatialVID offers flow supervision. Consistent with our findings on static scenes, flow-factored with factored flow prediction considerably outperforms the no-flow baseline (3d-sup) and other flow-supervised alternatives. Also, factored flow prediction brings consistent gains by using more data.
+            </p>
+          </div>
+        <div class="content has-text-centered">
+          <img src="./projects/flow3r/figures/result2.png" alt="SPARF Comparison figure." width="75%"/>
+        </div>
+        <!--/ Subsection. -->
+
+
+        <!-- Subsection. -->
+        <h3 class="title is-4">Scalability: Large-Scale Training with Unlabeled Videos</h3>
+        <div class="content has-text-justified">
+          <p>
+            Here we scale the training of an off-the-shelf large visual geometry network (VGGT) by leveraging our factored flow prediction strategy with unlabeled dynamic data. 
+            We evaluate performance using pose accuracy and reconstruction metrics in four dynamic datasets: Kinetics700, Epic-Kitchens, Sintel and Bonn.
+        </p>
+        </div>
+        <div class="content has-text-centered">
+            <img src="./projects/flow3r/figures/result3.png" alt="LEAP Comparison figure." width="100%"/>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3">Discussion</h2>
+    <p>
+        In this work, we present flow3r and demonstrate that it effectively leverages in-the-wild unlabeled data by introducing factored flow prediction, advancing visual geometry learning beyond existing fully supervised methods. While our approach opens up new possibilities, several challenges remain.
+    </p>
+    <p>
+        First, flow3r relies on off-the-shelf models to provide pseudo-ground-truth flow supervision, and there can be domains where such 2D prediction fails, limiting the performance upper bound of flow3r. Second, although our factored flow formulation elegantly handles dynamic scenes and enables flow supervision to improve the learning of both camera motion and scene geometry, flow3r may struggle under complex scenes with multiple moving independently components. 
+        Finally, our current experiments operate at a moderate scale (~800K video sequences for flow supervision), and scaling to truly large-scale settings (~10-100M videos) presents an exciting but unexplored direction. While this is out of scope for our work due to computational constraints, we envision flow3r's formulation serving as a building block for future large-scale learning methods.
+    </p>
+  </div>
+</section>
+
+
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3">BibTeX</h2>
+<pre><code>@inproceedings{zhao2025diffusionsfm,
+  title={DiffusionSfM: Predicting Structure and Motion via Ray Origin and Endpoint Diffusion}, 
+  author={Qitao Zhao and Amy Lin and Jeff Tan and Jason Y. Zhang and Deva Ramanan and Shubham Tulsiani},
+  booktitle={CVPR},
+  year={2025} 
+}</code></pre>
+  </div>
+</section> -->
+
+
+<!-- <section class="column" id="Acknowledgements">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3">Acknowledgements</h2>
+    <p>
+      We thank the members of the Physical Perception Lab at CMU for their valuable discussions, and extend special thanks to Yanbo Xu for his insights on diffusion models.
+    </p>
+    <p>
+      This work used Bridges-2 at Pittsburgh Supercomputing Center through allocation CIS240166 from the Advanced Cyberinfrastructure Coordination Ecosystem: Services & Support (ACCESS) program, which is supported by National Science Foundation grants #2138259, #2138286, #2138307, #2137603, and #2138296. This work was supported by Intelligence Advanced Research Projects Activity (IARPA) via Department of Interior/Interior Business Center (DOI/IBC) contract number 140D0423C0074. The U.S. Government is authorized to reproduce and distribute reprints for Governmental purposes notwithstanding any copyright annotation thereon. Disclaimer: The views and conclusions contained herein are those of the authors and should not be interpreted as necessarily representing the official policies or endorsements, either expressed or implied, of IARPA, DOI/IBC, or the U.S. Government.
+    </p>
+  </div>
+</section> -->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <!-- <a class="icon-link"
+         href="https://arxiv.org/abs/2505.05473">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/QitaoZhao/DiffusionSfM" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a> -->
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is built using this template (<a href="https://github.com/nerfies/nerfies.github.io">source code</a>). The 3D model visualization is adapted from <a href="https://vgg-t.github.io/">VGGT</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

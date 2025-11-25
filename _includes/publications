@@ -1,7 +1,7 @@
 
 <table class="pub_table">
 <tr>
-  <td class="pub_td1"><div class="teaser_img_div"><a href="https://arxiv.org/abs/2311.02874"><img class="teaser_img" src="images/flow3r.png" /></a></div></td>
+  <td class="pub_td1"><div class="teaser_img_div"><a href="https://kidrauh.github.io/flow3r"><img class="teaser_img" src="images/flow3r.png" /></a></div></td>
   <td class="pub_td2"><b>Flow3r: Factored Flow Prediction for Visual Geometry Learning</b><br />
 		<div class='paper_metadata'>
         <u><b>Zhongxiao Cong</b></u>,
@@ -12,13 +12,13 @@
         <div class='paper_metadata'>
         Under review
         </div>
-  <a href="https://arxiv.org/abs/2311.02874">Project Page</a> 
+  <a href="https://kidrauh.github.io/flow3r">Project Page</a> 
 </td></tr>
 
 <tr>
   <td class="pub_td1">
     <div class="teaser_img_div">
-      <a href="https://arxiv.org/abs/2311.02874">
+      <a>
         <img class="teaser_img" src="images/radarsim.png" />
       </a>
     </div>
@@ -39,7 +39,7 @@
     <div class='paper_metadata'>
       3DV, 2026
     </div>
-    <a href="https://arxiv.org/abs/2311.02874">Paper</a> 
+    <a>Paper</a> 
   </td>
 </tr>
 
