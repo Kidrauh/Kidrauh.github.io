@@ -18,6 +18,18 @@
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/favicon.svg">
+  <style>
+    /* 让整个页面的所有部分都使用80%宽度 */
+    .container.is-max-desktop {
+      max-width: 80% !important;
+      width: 80% !important;
+    }
+    
+    .section .container {
+      max-width: 80% !important;
+      width: 80% !important;
+    }
+  </style>
 
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -150,47 +162,565 @@
   </div>
 </section> -->
 
-<section class="hero teaser">
+<section class="hero teaser" style="padding: 0 0 30px 0; margin-top: -40px;">
     <div class="container fluid">
-        <div class="hero-body is-max-widescreen">
-            <center>
-                <video id="teaser" preload="auto" autoplay muted loop playsinline width="60%"
-                    style="pointer-events: none;">
-                    <!-- <source src="./projects/flow3r/videos/teaser_video.MOV" type="video/quicktime"> -->
-                    <source src="./projects/flow3r/videos/teaser_video.mp4" type="video/mp4">
-                </video>
-            </center>
-            <div class="columns is-centered">
-                <div class="column is-centered is-full">
-                    <div class="notification is-centered is-info is-rounded"
-                        style="text-align: center; padding-bottom: 5px; padding-top: 5px; background-color: #ffffff;">
-                        <h6 style="text-align: center; color:rgb(0, 0, 0); font-size: 18px">
-                            <strong>Flow3r</strong> leverages unlabeled videos via flow supervision for visual geometry learning, enabling more accurate reconstruction
-                            in challenging real-world dynamic scenes compared to supervised baselines that can only leverage dense geometry and pose supervision.
-                        </h6>
-                    </div>
+        <div class="hero-body is-max-widescreen" style="padding-top: 10px;">
+            <div class="teaser-container" style="background-color: #f5f7fa; border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); padding: 40px; max-width: 70%; margin: 0 auto;">
+                <center>
+                    <video id="teaser" preload="auto" autoplay muted loop playsinline width="100%" style="max-width: 800px; border-radius: 8px; pointer-events: none; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);">
+                        <!-- <source src="./projects/flow3r/videos/teaser_video.MOV" type="video/quicktime"> -->
+                        <source src="./projects/flow3r/videos/teaser_video.mp4" type="video/mp4">
+                    </video>
+                </center>
+                <div style="margin-top: 35px; text-align: center; padding: 0 20px;">
+                    <p style="font-size: 22px; line-height: 1.6; color: #2c3e50; font-weight: 400; margin: 0;">
+                        <strong style="color: #1976d2; font-weight: 600; font-size: 24px;">Flow3r</strong> leverages unlabeled videos via flow supervision for visual geometry learning, enabling more accurate reconstruction in challenging real-world dynamic scenes.
+                    </p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            We propose flow3r, a scalable framework for visual geometry learning that leverages flow prediction to guide learning using unlabeled monocular videos. Current 3D/4D reconstruction systems primarily rely on dense geometry and pose supervision, and cannot easily generalize to diverse dynamic real-world scenes. In this work, we propose a mechanism to augment training directly from unlabeled videos, leveraging dense 2D correspondences (or 'flow')  between arbitrary image pairs as supervision.
-            Our key insight is that a factored flow prediction module that computes between two images using 'geometry latents' from one image and the 'pose latent' from other can guide visual geometry learning. We first highlight the benefits and scalability of flow supervision in controlled settings and then leverage large-scale unlabeled data to improve off-the-shelf visual geometry models. We evaluate flow3r across diverse 3D benchmarks and demonstrate competitive or state-of-the-art performance, even surpassing supervised models trained with more labeled data.
-          </p>
+<section class="section" style="background-color: #f5f5f5;">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              We propose flow3r, a scalable framework for visual geometry learning that leverages flow prediction to guide learning using unlabeled monocular videos. Current 3D/4D reconstruction systems primarily rely on dense geometry and pose supervision, and cannot easily generalize to diverse dynamic real-world scenes. In this work, we propose a mechanism to augment training directly from unlabeled videos, leveraging dense 2D correspondences (or 'flow')  between arbitrary image pairs as supervision.
+              Our key insight is that a factored flow prediction module that computes between two images using 'geometry latents' from one image and the 'pose latent' from other can guide visual geometry learning. We first highlight the benefits and scalability of flow supervision in controlled settings and then leverage large-scale unlabeled data to improve off-the-shelf visual geometry models. We evaluate flow3r across diverse 3D benchmarks and demonstrate competitive or state-of-the-art performance, even surpassing supervised models trained with more labeled data.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Results</h2>
+                <p>
+                    Our unified framework tackles various 3D tasks. Select each tab below to explore the results for
+                    each task.
+                </p>
+                <nav>
+                    <ul>
+                        <li><a id="nav1" href="javascript:void(0);" onclick="showSection('video_4d');setActive('nav1');">Dynamic Scene Reconstruction</a></li>
+                        <li><a id="nav2" href="javascript:void(0);" onclick="showSection('video_3d');setActive('nav2');">Egocentric Scene Reconstruction</a></li>
+                        <li><a id="nav3" href="javascript:void(0);" onclick="showSection('photo');setActive('nav3');">Interactive Comparisons</a></li>
+                    </ul>
+                </nav>
+                <style>
+                    nav ul {
+                        list-style: none;
+                        display: flex;
+                        flex-wrap: nowrap;
+                        justify-content: center;
+                        gap: 10px;
+                        padding: 0;
+                        margin: 20px 0;
+                    }
+                    nav ul li {
+                        margin: 0;
+                        flex: 1;
+                        max-width: 300px;
+                    }
+                    nav ul li a {
+                        display: block;
+                        width: 100%;
+                        padding: 12px 20px;
+                        background-color: #f5f5f5;
+                        color: #333;
+                        text-decoration: none;
+                        border-radius: 5px;
+                        border: 1px solid #ddd;
+                        transition: all 0.3s ease;
+                        cursor: pointer;
+                        font-weight: 500;
+                        text-align: center;
+                        box-sizing: border-box;
+                    }
+                    nav ul li a:hover {
+                        background-color: #e8e8e8;
+                        border-color: #bbb;
+                    }
+                    nav ul li a.active {
+                        background-color: #e3f2fd;
+                        border-color: #90caf9;
+                        color: #1976d2;
+                        font-weight: 600;
+                    }
+                </style>
+            </div>
+            <script>
+                function showSection(sectionId) {
+                    // Hide all dynamic sections
+                    document.querySelectorAll('.dynamic-section').forEach(function(section) {
+                        section.style.display = 'none';
+                    });
+                    
+                    // Show the selected section
+                    const section = document.getElementById(sectionId);
+                    if (section) {
+                        section.style.display = 'block';
+                    }
+                }
+                
+                function setActive(activeId) {
+                    // Remove 'active' class from all links
+                    document.querySelectorAll('nav ul li a').forEach(function(link) {
+                        link.classList.remove('active');
+                    });
+                
+                    // Add 'active' class to the clicked link
+                    document.getElementById(activeId).classList.add('active');
+                }
+                
+                // Initialize: show first section by default
+                document.addEventListener('DOMContentLoaded', function() {
+                    showSection('video_4d');
+                    setActive('nav1');
+                });
+                </script>
+        </div>
+    </div>
+    <script defer src="./static/js/nav.js"></script>
+
+    <section id="video_4d" class="section dynamic-section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-full section-panel">
+                    <h3 class="title is-4">Dynamic Scene Reconstruction</h3>
+                    <p>
+                        Our method can reconstruct dynamic scenes in a feed-forward, online manner without per-video
+                        optimization.
+                    </p>
+                    <div class="carousel-container" style="position: relative; width: 100%; margin: 30px 0;">
+                        <button class="carousel-arrow carousel-arrow-left" onclick="slideCarousel(-1)" style="position: absolute; left: -50px; top: 50%; transform: translateY(-50%); background-color: rgba(0, 0, 0, 0.5); color: white; border: none; border-radius: 50%; width: 50px; height: 50px; cursor: pointer; z-index: 10; font-size: 24px; display: flex; align-items: center; justify-content: center; transition: background-color 0.3s;">
+                            ‹
+                        </button>
+                        <button class="carousel-arrow carousel-arrow-right" onclick="slideCarousel(1)" style="position: absolute; right: -50px; top: 50%; transform: translateY(-50%); background-color: rgba(0, 0, 0, 0.5); color: white; border: none; border-radius: 50%; width: 50px; height: 50px; cursor: pointer; z-index: 10; font-size: 24px; display: flex; align-items: center; justify-content: center; transition: background-color 0.3s;">
+                            ›
+                        </button>
+                        <div class="carousel-wrapper" style="overflow: hidden; width: 100%;">
+                            <div class="carousel-track" id="carousel-track" style="display: flex; transition: transform 0.5s ease-in-out;">
+                                <!-- Slide 1 -->
+                                <div class="carousel-slide" style="min-width: 100%; display: flex; gap: 20px; padding: 0 10px;">
+                                    <div class="iframe-container" style="flex: 1; min-width: 0;">
+                                        <iframe class="vframe"
+                                            src="./projects/flow3r/build/?playbackPath=/projects/flow3r/recordings/basketball.viser&initialCameraPosition=0.0,0.0,-2.0&initialCameraLookAt=0.0,0.0,1.0&baseSpeed=0.8"
+                                            loading="lazy"></iframe>
+                                    </div>
+                                    <div class="iframe-container" style="flex: 1; min-width: 0;">
+                                        <iframe class="vframe"
+                                            src="./projects/flow3r/build/?playbackPath=/projects/flow3r/recordings/panda.viser&initialCameraPosition=0.0,0.0,-1.0&initialCameraLookAt=0.0,0.0,1.0&baseSpeed=0.8"
+                                            loading="lazy"></iframe>
+                                    </div>
+                                </div>
+                                <!-- Slide 2 -->
+                                <div class="carousel-slide" style="min-width: 100%; display: flex; gap: 20px; padding: 0 10px;">
+                                    <div class="iframe-container" style="flex: 1; min-width: 0;">
+                                        <iframe class="vframe"
+                                            src="./projects/flow3r/build/?playbackPath=/projects/flow3r/recordings/mall1.viser&initialCameraPosition=0.0,0.0,-2.0&initialCameraLookAt=0.0,0.0,1.0&baseSpeed=0.8"
+                                            loading="lazy"></iframe>
+                                    </div>
+                                    <div class="iframe-container" style="flex: 1; min-width: 0;">
+                                        <iframe class="vframe"
+                                            src="./projects/flow3r/build/?playbackPath=/projects/flow3r/recordings/mouse.viser&initialCameraPosition=0.0,0.0,-1.0&initialCameraLookAt=0.0,0.0,1.0&baseSpeed=0.8"
+                                            loading="lazy"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-indicators" style="display: flex; justify-content: center; gap: 10px; margin-top: 20px;">
+                            <span class="carousel-dot active" onclick="goToSlide(0)" style="width: 12px; height: 12px; border-radius: 50%; background-color: #1976d2; cursor: pointer; transition: background-color 0.3s;"></span>
+                            <span class="carousel-dot" onclick="goToSlide(1)" style="width: 12px; height: 12px; border-radius: 50%; background-color: #ccc; cursor: pointer; transition: background-color 0.3s;"></span>
+                        </div>
+                        <div style="text-align: center; margin-top: 15px;">
+                            <p style="font-size: 16px; color: #1976d2; font-weight: 600; margin: 0; display: inline-flex; align-items: center; gap: 8px;">
+                                <span style="font-size: 20px;">←</span>
+                                <span>Click arrows to view more visualizations</span>
+                                <span style="font-size: 20px;">→</span>
+                            </p>
+                        </div>
+                    </div>
+                    <script>
+                        let currentSlide = 0;
+                        const totalSlides = 2;
+                        
+                        function slideCarousel(direction) {
+                            currentSlide += direction;
+                            if (currentSlide < 0) {
+                                currentSlide = totalSlides - 1;
+                            } else if (currentSlide >= totalSlides) {
+                                currentSlide = 0;
+                            }
+                            updateCarousel();
+                        }
+                        
+                        function goToSlide(index) {
+                            currentSlide = index;
+                            updateCarousel();
+                        }
+                        
+                        function updateCarousel() {
+                            const track = document.getElementById('carousel-track');
+                            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+                            
+                            // Update indicators
+                            const dots = document.querySelectorAll('.carousel-dot');
+                            dots.forEach((dot, index) => {
+                                if (index === currentSlide) {
+                                    dot.classList.add('active');
+                                    dot.style.backgroundColor = '#1976d2';
+                                } else {
+                                    dot.classList.remove('active');
+                                    dot.style.backgroundColor = '#ccc';
+                                }
+                            });
+                        }
+                        
+                        // Arrow hover effects
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const arrows = document.querySelectorAll('.carousel-arrow');
+                            arrows.forEach(arrow => {
+                                arrow.addEventListener('mouseenter', function() {
+                                    this.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+                                });
+                                arrow.addEventListener('mouseleave', function() {
+                                    this.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+                                });
+                            });
+                        });
+                    </script>
+                    <br>
+                    <!-- <div>
+            (Results are downsampled for efficient online rendering)
+          </div> -->
+                    <div class="hide-on-touchscreens" style="
+                        display: flex;
+                        justify-content: center;
+                        gap: 1.5em;
+                        padding-top: 0.5em;
+                    ">
+                        <div>
+                            <i class="ti ti-view-360-arrow"></i> <strong>Left-click</strong> and
+                            drag to rotate
+                        </div>
+                        <div>
+                            <i class="ti ti-arrows-move"></i> <strong>Right-click</strong> and
+                            drag or
+                            <strong>WASD</strong>
+                            to move
+                        </div>
+                        <div><i class="ti ti-zoom"></i> <strong>Scroll</strong> to zoom</div>
+                        <div><strong>Click <i class="fas fa-pause"></i></strong> to pause</div>
+                    </div>
+                    <script>
+                        // Get the paragraph element
+                        var para = document.getElementById('click-interactive');
+
+                        // Add event listeners for mouse enter and mouse leave
+                        para.addEventListener('mouseenter', function () {
+                            para.style.fontSize = '22px'; // Increase font size
+                            para.style.boxShadow = '0 4px 8px rgba(0,0,0,0.2)'; // Enhance shadow
+                        });
+
+                        para.addEventListener('mouseleave', function () {
+                            para.style.fontSize = '18px'; // Reset font size
+                            para.style.boxShadow = '0 2px 5px rgba(0,0,0,0.1)'; // Reset shadow
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+        <style>
+            .section-panel {
+                background-color: #f5f5f5;
+                border-radius: 10px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                padding: 30px;
+                margin: 20px 0;
+            }
+            
+            .visualization-wrapper {
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                align-items: flex-start;
+                gap: 20px;
+                width: 100%;
+                margin: 30px 0;
+            }
+            
+            .iframe-container {
+                flex: 1;
+                min-width: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .iframe-container .vframe {
+                width: 100%;
+                height: 500px;
+                border: none;
+                border-radius: 8px;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            }
+            
+            /* Carousel styles */
+            .carousel-container .iframe-container .vframe {
+                width: 100%;
+                height: 500px;
+            }
+            
+            .carousel-arrow:hover {
+                background-color: rgba(0, 0, 0, 0.8) !important;
+            }
+            
+            @media (max-width: 1024px) {
+                .carousel-arrow {
+                    width: 40px !important;
+                    height: 40px !important;
+                    font-size: 20px !important;
+                }
+                .carousel-arrow-left {
+                    left: -30px !important;
+                }
+                .carousel-arrow-right {
+                    right: -30px !important;
+                }
+            }
+            
+            .iframe-container button {
+                margin-top: 15px;
+                padding: 10px 20px;
+                background-color: #4a90e2;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 14px;
+                transition: background-color 0.3s ease;
+            }
+            
+            .iframe-container button:hover {
+                background-color: #357abd;
+            }
+            
+            @media (max-width: 768px) {
+                .visualization-wrapper {
+                    flex-direction: column;
+                }
+                
+                .iframe-container .vframe {
+                    height: 400px;
+                }
+            }
+        </style>
+    </section>
+
+    <section id="video_3d" class="section dynamic-section" style="display: none;">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-full section-panel">
+                    <h3 class="title is-4">Egocentric Scene Reconstruction</h3>
+                    <p>
+                        Our method can reconstruct egocentric scenes in a feed-forward, online manner without per-video
+                        optimization.
+                    </p>
+                    <div id="wrapper" class="visualization-wrapper" style="margin: 30px 0;">
+                        <div class="iframe-container">
+                            <iframe class="vframe"
+                                src="./projects/flow3r/build/?playbackPath=/projects/flow3r/recordings/gopro.viser&initialCameraPosition=0.0,0.0,-3.0&initialCameraLookAt=0.0,0.0,1.0&baseSpeed=0.8"
+                                loading="lazy"></iframe>
+                        </div>
+                        <div class="iframe-container">
+                            <iframe class="vframe"
+                                src="./projects/flow3r/build/?playbackPath=/projects/flow3r/recordings/epickitchen.viser&initialCameraPosition=0.0,0.0,-3.0&initialCameraLookAt=0.0,0.0,1.0&baseSpeed=0.8"
+                                loading="lazy"></iframe>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="hide-on-touchscreens" style="
+                        display: flex;
+                        justify-content: center;
+                        gap: 1.5em;
+                        padding-top: 0.5em;
+                    ">
+                        <div>
+                            <i class="ti ti-view-360-arrow"></i> <strong>Left-click</strong> and
+                            drag to rotate
+                        </div>
+                        <div>
+                            <i class="ti ti-arrows-move"></i> <strong>Right-click</strong> and
+                            drag or
+                            <strong>WASD</strong>
+                            to move
+                        </div>
+                        <div><i class="ti ti-zoom"></i> <strong>Scroll</strong> to zoom</div>
+                        <div><strong>Click <i class="fas fa-pause"></i></strong> to pause</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="photo" class="section dynamic-section" style="display: none;">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-full section-panel">
+                    <h3 class="title is-4">Interactive Comparisons</h3>
+                    <div class="content has-text-justified">
+                        <div style="
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 500px;
+                        width: 100%;
+                        background: #ffffff;
+                        border-radius: 8px;
+                        margin: 20px 0;">
+                            <model-viewer id="QualitativeResult"
+                                        src="./projects/flow3r/3D/car_flow3r.glb"
+                                        alt="3D Model"
+                                        loading="eager"
+                                        touch-action="pan-y"
+                                        environment-image="legacy"
+                                        camera-orbit="180deg 70deg auto"
+                                        zoom-sensitivity="0.2"
+                                        camera-controls
+                                        style="width: 60%; height: 90%; background: #887c7c;">
+                            </model-viewer>
+                        </div>
+                        <div class="content has-text-justified">
+                            <div class="thumbnail-container" id="thumbnail-qualitative">
+                                <img src="./projects/flow3r/3D/car.png" data-glb="./projects/flow3r/3D/car_flow3r.glb">
+                                <img src="./projects/flow3r/3D/cat.png" data-glb="./projects/flow3r/3D/cat_flow3r.glb">
+                                <img src="./projects/flow3r/3D/room.png" data-glb="./projects/flow3r/3D/room_flow3r.glb">
+                                <img src="./projects/flow3r/3D/kitchen2.png" data-glb="./projects/flow3r/3D/kitchen2_flow3r.glb">
+                            </div>  
+                        </div>  
+                        <style>
+                            .thumbnail-container img, .thumbnail-container video {
+                                transition: all 0.3s ease;
+                                border: 3px solid transparent;
+                                cursor: pointer;
+                            }
+                            .thumbnail-selected {
+                                transform: scale(1.2);
+                                border: 6px solid #79b4f2 !important; 
+                                box-shadow: 0 0 10px rgba(121, 180, 242, 0.5);
+                                z-index: 10;
+                                position: relative;
+                            }
+                            
+                            /* New styles for responsive horizontal gallery */
+                            .thumbnail-container {
+                                display: flex;
+                                flex-wrap: nowrap;
+                                overflow-x: auto;
+                                gap: 10px;
+                                padding: 10px 0;
+                                -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+                                scrollbar-width: thin;
+                                align-items: center;
+                            }
+                            
+                            .thumbnail-container img, 
+                            .thumbnail-container video {
+                                flex: 0 0 auto;
+                                height: auto;
+                                width: 200px; /* Consistent width */
+                                object-fit: cover;
+                                max-width: none;
+                            }
+                            
+                            /* Custom scrollbar styling */
+                            .thumbnail-container::-webkit-scrollbar {
+                                height: 6px;
+                            }
+                            
+                            .thumbnail-container::-webkit-scrollbar-track {
+                                background: #f1f1f1;
+                                border-radius: 10px;
+                            }
+                            
+                            .thumbnail-container::-webkit-scrollbar-thumb {
+                                background: #888;
+                                border-radius: 10px;
+                            }
+                            
+                            .thumbnail-container::-webkit-scrollbar-thumb:hover {
+                                background: #555;
+                            }
+                            
+                            /* Adjust for smaller screens */
+                            @media (max-width: 768px) {
+                                .thumbnail-container img,
+                                .thumbnail-container video {
+                                    height: 100px;
+                                }
+                            }
+                        </style>
+                        <script>
+                            // Initialize thumbnail selection for photo section
+                            document.addEventListener('DOMContentLoaded', function() {
+                                const firstThumbnail = document.querySelector('#thumbnail-qualitative video, #thumbnail-qualitative img');
+                                if (firstThumbnail) {
+                                    firstThumbnail.classList.add('thumbnail-selected');
+                                    if (firstThumbnail.tagName.toLowerCase() === 'video') {
+                                        firstThumbnail.play();
+                                    }
+                                }
+                                
+                                document.querySelectorAll('#thumbnail-qualitative img, #thumbnail-qualitative video').forEach(el => {
+                                    el.addEventListener('click', () => {
+                                        const glbSrc = el.getAttribute('data-glb');
+                                        const modelViewer = document.getElementById('QualitativeResult');
+                                        if (modelViewer && glbSrc) {
+                                            modelViewer.setAttribute('src', glbSrc);
+                                            modelViewer.cameraOrbit = "180deg 70deg auto";
+                                            modelViewer.resetTurntableRotation(0);
+                                            modelViewer.jumpCameraToGoal();
+                                        }
+
+                                        // Remove selection class from all elements
+                                        document.querySelectorAll('#thumbnail-qualitative img, #thumbnail-qualitative video').forEach(element => {
+                                            element.classList.remove('thumbnail-selected');
+                                        });
+                                        
+                                        // Add selection class to clicked element
+                                        el.classList.add('thumbnail-selected');
+                                        
+                                        // Play video if it's a video element
+                                        if (el.tagName.toLowerCase() === 'video') {
+                                            el.play();
+                                        }
+                                        
+                                        // Pause all other videos
+                                        document.querySelectorAll('#thumbnail-qualitative video').forEach(video => {
+                                            if (video !== el) {
+                                                video.pause();
+                                                video.currentTime = 0;
+                                            }
+                                        });
+                                    });
+                                });
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 <section class="section">
     <div class="container is-max-desktop">
@@ -227,155 +757,6 @@
     </div>
 </section>
 
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3">Interactive 3D Models</h2>
-    <div class="columns is-centered">
-      <div class="content has-text-justified">
-          <div style="
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 500px;
-          width: 100%;
-          background: #ffffff;">
-            <model-viewer id="QualitativeResult"
-                          src="./projects/flow3r/3D/car_flow3r.glb"
-                          alt="3D Model"
-                          loading="eager"
-                          touch-action="pan-y"
-                          environment-image="legacy"
-                          camera-orbit="180deg 70deg auto"
-                          zoom-sensitivity="0.2"
-                          camera-controls
-                          style="width: 60%; height: 90%; background: #887c7c;">
-            </model-viewer>
-        </div>
-        <div class="content has-text-justified">
-          <div class="thumbnail-container" id="thumbnail-qualitative">
-            <img src="./projects/flow3r/3D/car.png" data-glb="./projects/flow3r/3D/car_flow3r.glb">
-            <img src="./projects/flow3r/3D/cat.png" data-glb="./projects/flow3r/3D/cat_flow3r.glb">
-            <img src="./projects/flow3r/3D/room.png" data-glb="./projects/flow3r/3D/room_flow3r.glb">
-            <img src="./projects/flow3r/3D/kitchen2.png" data-glb="./projects/flow3r/3D/kitchen2_flow3r.glb">
-          </div>  
-        </div>  
-        <style>
-          .thumbnail-container img, .thumbnail-container video {
-            transition: all 0.3s ease;
-            border: 3px solid transparent;
-            cursor: pointer;
-          }
-          .thumbnail-selected {
-            transform: scale(1.2);
-            border: 6px solid #79b4f2 !important; 
-            box-shadow: 0 0 10px rgba(121, 180, 242, 0.5);
-            z-index: 10;
-            position: relative;
-          }
-          
-          /* New styles for responsive horizontal gallery */
-          .thumbnail-container {
-            display: flex;
-            flex-wrap: nowrap;
-            overflow-x: auto;
-            gap: 10px;
-            padding: 10px 0;
-            -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-            scrollbar-width: thin;
-            align-items: center;
-          }
-          
-          .thumbnail-container img, 
-          .thumbnail-container video {
-            flex: 0 0 auto;
-            height: auto;
-            width: 200px; /* Consistent width */
-            object-fit: cover;
-            max-width: none;
-          }
-          
-          /* Custom scrollbar styling */
-          .thumbnail-container::-webkit-scrollbar {
-            height: 6px;
-          }
-          
-          .thumbnail-container::-webkit-scrollbar-track {
-            background: #f1f1f1;
-            border-radius: 10px;
-          }
-          
-          .thumbnail-container::-webkit-scrollbar-thumb {
-            background: #888;
-            border-radius: 10px;
-          }
-          
-          .thumbnail-container::-webkit-scrollbar-thumb:hover {
-            background: #555;
-          }
-          
-          /* Adjust for smaller screens */
-          @media (max-width: 768px) {
-            .thumbnail-container img,
-            .thumbnail-container video {
-              height: 100px;
-            }
-          }
-        </style>
-        <script>
-          // The problem is here - you're trying to select an element that doesn't exist
-          // document.querySelector('#thumbnail-qualitative img[src="resources/qualitative/college.png"]').classList.add('thumbnail-selected');
-          
-          // Instead, select the first element that actually exists in your thumbnail container
-          document.addEventListener('DOMContentLoaded', function() {
-            // Select the first element in the thumbnail container (video or image)
-            const firstThumbnail = document.querySelector('#thumbnail-qualitative video, #thumbnail-qualitative img');
-            if (firstThumbnail) {
-              firstThumbnail.classList.add('thumbnail-selected');
-              // If it's a video, play it
-              if (firstThumbnail.tagName.toLowerCase() === 'video') {
-                firstThumbnail.play();
-              }
-            }
-            
-            document.querySelectorAll('#thumbnail-qualitative img, #thumbnail-qualitative video').forEach(el => {
-              // Rest of your click handler code remains the same
-              el.addEventListener('click', () => {
-                const glbSrc = el.getAttribute('data-glb');
-                const modelViewer = document.getElementById('QualitativeResult');
-                modelViewer.setAttribute('src', glbSrc);
-                modelViewer.cameraOrbit = "180deg 70deg auto";
-                modelViewer.resetTurntableRotation(0);
-                modelViewer.jumpCameraToGoal();
-
-                // Remove selection class from all elements
-                document.querySelectorAll('#thumbnail-qualitative img, #thumbnail-qualitative video').forEach(element => {
-                    element.classList.remove('thumbnail-selected');
-                });
-                
-                // Add selection class to clicked element
-                el.classList.add('thumbnail-selected');
-                
-                // Play video if it's a video element
-                if (el.tagName.toLowerCase() === 'video') {
-                    el.play();
-                }
-                
-                // Pause all other videos
-                document.querySelectorAll('#thumbnail-qualitative video').forEach(video => {
-                    if (video !== el) {
-                        video.pause();
-                        video.currentTime = 0;
-                    }
-                });
-              });
-            });
-          });
-        </script>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 <section class="section">
