@@ -1,42 +1,75 @@
+<style>
+  .education-list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    width: 100%;
+    margin-bottom: 72px;
+  }
 
-<table class="pub_table">
-<tr>
-    <td class="pub_td1"><div class="teaser_img_div"><img class="teaser_img" src="images/cmu.jpg" /></div></td>
-    <td class="pub_td2"><b>Carnegie Mellon University</b><br />
-            <div class='paper_metadata'>
-            Master's student in Computer Vision (MSCV)
-            </div>
-            <div class='paper_metadata'>
-                Aug. 2024 - Expected Dec. 2025
-            </div>
-    </td></tr>
-    {% include table-space.html %}
-    
-<tr>
-  <td class="pub_td1"><div class="teaser_img_div"><img class="teaser_img" src="images/mit.png" /></div></td>
-  <td class="pub_td2"><b>Massachusetts Institute of Technology</b><br />
-		<div class='paper_metadata'>
-        Exchange student in Computer Science
-        </div>
-        <!-- Undergraduate researcher at <a href="https://www.csail.mit.edu/research/medical-vision-group">Medical Vision Group</a>, MIT CSAIL -->
-        <div class='paper_metadata'>
-            Feb. 2023 - May 2023
-        </div>
-</td></tr>
-{% include table-space.html %}
+  .education-item {
+    min-width: 0;
+    text-align: center;
+    font-size: 0.82em;
+  }
 
-<tr>
-    <td class="pub_td1"><div class="teaser_img_div"><img class="teaser_img" src="images/shtech.jpeg"/></div></td>
-    <td class="pub_td2"><b>ShanghaiTech University</b><br />
-          <div class='paper_metadata'>
-            Bachelor in Computer Science
-          </div>
-          <!-- Undergraduate researcher at <a href="https://plus.sist.shanghaitech.edu.cn/">PLUS Lab</a> -->
-          <div class='paper_metadata'>
-            Sep. 2020 - Jun. 2024
-          </div>
-  </td></tr>
-  {% include table-space.html %}
+  .education-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 92px;
+    margin-bottom: 6px;
+  }
 
+  .education-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 
-</table>
+  .education-logo img.education-logo-cornell {
+    width: 100%;
+    height: 100%;
+  }
+
+  .education-item .paper_metadata {
+    margin-top: 4px;
+    font-size: 0.9em;
+    line-height: 1.35;
+  }
+
+</style>
+
+<div class="education-list">
+  <div class="education-item">
+    <div class="education-logo">
+      <img class="education-logo-cornell" src="images/cornell.png" alt="Cornell University logo" />
+    </div>
+    <b>Cornell University</b>
+    <div class="paper_metadata">Ph.D. Student in Computer Science</div>
+  </div>
+
+  <div class="education-item">
+    <div class="education-logo">
+      <img src="images/cmu.jpg" alt="Carnegie Mellon University logo" />
+    </div>
+    <b>Carnegie Mellon University</b>
+    <div class="paper_metadata">Master of Science in Computer Vision (MSCV)</div>
+  </div>
+
+  <div class="education-item">
+    <div class="education-logo">
+      <img src="images/mit.png" alt="Massachusetts Institute of Technology logo" />
+    </div>
+    <b>Massachusetts Institute of Technology</b>
+    <div class="paper_metadata">Exchange student in Computer Science</div>
+  </div>
+
+  <div class="education-item">
+    <div class="education-logo">
+      <img src="images/shtech.jpeg" alt="ShanghaiTech University logo" />
+    </div>
+    <b>ShanghaiTech University</b>
+    <div class="paper_metadata">Bachelor of Engineering in Computer Science</div>
+  </div>
+</div>

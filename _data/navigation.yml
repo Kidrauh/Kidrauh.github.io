@@ -15,11 +15,9 @@ main:
   # - title: "Selected Projects"
   #   url: "/#-project"
 
-  - title: "Honors and Awards"
-    url: "/#-honors-and-awards"
+  # - title: "Honors and Awards"
+  #   url: "/#-honors-and-awards"
 
-  - title: "Teaching"
-    url: "/#-teachings"
+  # - title: "Teaching"
+  #   url: "/#-teachings"
 
-  - title: "CV"
-    url: "/files/cv.pdf"

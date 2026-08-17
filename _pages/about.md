@@ -19,9 +19,9 @@ redirect_from:
 
 # About me
 
-Hi! I’m Zhongxiao (Clara) Cong. I am currently a Master’s student in Computer Vision at Carnegie Mellon University, advised by [Prof. Shubham Tulsiani](https://shubhtuls.github.io/). Before that, I was fortunate to work with [Prof. Matthew O'Toole](https://www.cs.cmu.edu/~motoole2/) on multi-modal 3D reconstruction. I am broadly interested in computer vision and machine learning, with a focus on 3D vision and developing models that capture the structure and motion of the dynamic world.
+Hi! I’m Zhongxiao (Clara) Cong. I'm a first-year CS Ph.D. student at Cornell university, advised by [Prof. Andrew Owens](https://andrewowens.com/).
 
-I obtained my B.Eng. in Computer Science at ShanghaiTech University. During Spring 2023, I was an exchange student at MIT, where I joined the Medical Vision Group under the supervision of [Prof. Polina Golland](https://people.csail.mit.edu/polina/) and was mentored by [Dr. Neel Dey](https://www.neeldey.com/). I couldn’t be more grateful for their invaluable insights and support.
+Previously, I was a master student in the Robotics Institute at Carnegie Mellon University, working with [Prof. Shubham Tulsiani](https://shubhtuls.github.io/) and [Prof. Matthew O'Toole](https://www.cs.cmu.edu/~motoole2/). I obtained my B.Eng. in Computer Science at ShanghaiTech University. During Spring 2023, I was an exchange student at MIT, where I joined the Medical Vision Group under the supervision of [Prof. Polina Golland](https://people.csail.mit.edu/polina/) and was mentored by [Dr. Neel Dey](https://www.neeldey.com/). I couldn’t be more grateful for their invaluable insights and support.
 
 Always happy to chat about research!
 
@@ -44,12 +44,11 @@ I am generally interested in <b>Computer Vision</b>, <b>Graphics</b>, and <b>Mac
 	} */
     .paper_metadata a {
     color: #1a4b8b;        /* darkred */
-    text-decoration: none; /* 不要下划线 */
+    text-decoration: none; 
     }
 
-    /* 悬停时变亮 */
     .paper_metadata a:hover {
-        color:rgb(252, 147, 61);        /* firebrick，稍微亮一点 */
+        color:rgb(252, 147, 61);    
         text-decoration: none;
     }
 	table, th, td {
@@ -91,20 +90,20 @@ I am generally interested in <b>Computer Vision</b>, <b>Graphics</b>, and <b>Mac
 
 {% include projects %} -->
 
-<span class='anchor' id='-honors-and-awards'></span>
+<!-- <span class='anchor' id='-honors-and-awards'></span> -->
 
-# Selected Awards
-- *2024.06* Shanghai Outstanding Graduates
+<!-- # Selected Awards -->
+<!-- - *2024.06* Shanghai Outstanding Graduates -->
 <!-- - *2023.06* ShanghaiTech International Exchange Program Scholarship -->
-- *2022.12* ShanghaiTech Merit Student
+<!-- - *2022.12* ShanghaiTech Merit Student -->
 <!-- - *2022.11* The Outstanding Individual of ShanghaiTech Career Trek Program -->
 <!-- - *2021.11* The Outstanding Individual of ShanghaiTech Social Practice Project -->
 
 
-<span class='anchor' id='-teachings'></span>
+<!-- <span class='anchor' id='-teachings'></span>
 
 # Teaching
 <p style="color: #A5A4A4">Teaching is one of my FAVORITE ways of learning :D</p>
 
 - *2024.03 - 2024.06*, TOEFL Teaching Assistant, El Fuego Education Services.
-- *2022.09 - 2023.01*, Teaching Assistant in Algorithm and Data Structures, ShanghaiTech University.
+- *2022.09 - 2023.01*, Teaching Assistant in Algorithm and Data Structures, ShanghaiTech University. -->

@@ -7,7 +7,7 @@
 
 # Site Settings
 title                    : "Zhongxiao (Clara) Cong"
-description              : "MSCV student at Carnegie Mellon University"
+description              : "Ph.D. student in Computer Science"
 repository               : "Kidrauh/Kidrauh.github.io"
 google_scholar_stats_use_cdn : true
 
@@ -23,12 +23,12 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 author:
   name             : "Zhongxiao (Clara) Cong"
   avatar           : "images/photo.jpg"
-  bio              : "Carnegie Mellon University"
-  location         : "Pittsburgh, PA"
+  bio              : "Cornell University"
+  location         :
   employer         :
   pubmed           : 
-  googlescholar    : # "https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID"
-  email            : "zcong@andrew.cmu.edu"
+  googlescholar    : "https://scholar.google.com/citations?user=utKB3PgAAAAJ&hl=en"
+  email            : "zc628@cornell.edu"
   researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
